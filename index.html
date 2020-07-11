@@ -175,10 +175,48 @@
 <h4 id="What’s-learnt"><a href="#What’s-learnt" class="headerlink" title="What’s learnt ?"></a>What’s learnt ?</h4><ul>
 <li>Python has two type of Comments</li>
 </ul>
-<h5 id="为什么不想看这串程序呢？"><a href="#为什么不想看这串程序呢？" class="headerlink" title="为什么不想看这串程序呢？"></a>为什么不想看这串程序呢？</h5><blockquote>
-<p>def eyes(x,y):<br>    “””画眼睛”””<br>    color((255, 155, 192), “white”)<br>    penup()<br>    setheading(90)<br>    forward(-20)<br>    setheading(0)<br>    forward(-95)<br>    pendown()<br>    begin_fill()<br>    circle(15)<br>    end_fill()<br>    color(“black”)<br>    penup()<br>    setheading(90)<br>    forward(12)<br>    setheading(0)<br>    forward(-3)<br>    pendown()<br>    begin_fill()<br>    circle(3)<br>    end_fill()<br>    color((255, 155, 192), “white”)<br>    penup()<br>    seth(90)<br>    forward(-25)<br>    seth(0)<br>    forward(40)<br>    pendown()<br>    begin_fill()<br>    circle(15)<br>    end_fill()<br>    color(“black”)<br>    penup()<br>    setheading(90)<br>    forward(12)<br>    setheading(0)<br>    forward(-3)<br>    pendown()<br>    begin_fill()<br>    circle(3)<br>    end_fill()</p>
-</blockquote>
-<p>感觉像是「外星语」一样，虽然可以通过函数名称大致猜到函数的功能，但验证的成本太高了，而且这样做的感觉太笨了，完全没有想这样的动机。</p>
+<h5 id="为什么不想看这串程序呢？"><a href="#为什么不想看这串程序呢？" class="headerlink" title="为什么不想看这串程序呢？"></a>为什么不想看这串程序呢？</h5><pre><code>def eyes(x,y):
+&quot;&quot;&quot;画眼睛&quot;&quot;&quot;
+color((255, 155, 192), &quot;white&quot;)
+penup()
+setheading(90)
+forward(-20)
+setheading(0)
+forward(-95)
+pendown()
+begin_fill()
+circle(15)
+end_fill()
+color(&quot;black&quot;)
+penup()
+setheading(90)
+forward(12)
+setheading(0)
+forward(-3)
+pendown()
+begin_fill()
+circle(3)
+end_fill()
+color((255, 155, 192), &quot;white&quot;)
+penup()
+seth(90)
+forward(-25)
+seth(0)
+forward(40)
+pendown()
+begin_fill()
+circle(15)
+end_fill()
+color(&quot;black&quot;)
+penup()
+setheading(90)
+forward(12)
+setheading(0)
+forward(-3)
+pendown()
+begin_fill()
+circle(3)
+end_fill()</code></pre><p>感觉像是「外星语」一样，虽然可以通过函数名称大致猜到函数的功能，但验证的成本太高了，而且这样做的感觉太笨了，完全没有想这样的动机。</p>
 <p>Markdown可以让写作更具逻辑结构。</p>
 <h3 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h3><h4 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h4><ul>
 <li>复数是什么？</li>
@@ -197,7 +235,126 @@
 b = int(input(&apos;b = &apos;))
 print(&apos;%d + %d = %d&apos; % (a, b, a + b))
 print(&apos;%d - %d = %d&apos; % (a, b, a - b))</code></pre><p>为什么要使用占位符呢？<br>为什么不直接用print(a,b, a + b)</p>
+<pre><code>print(a,&quot;+&quot;,b, &quot;=&quot;,a+b)
+# 如果不使用占位符语法，实现相同的效果，是这样的</code></pre><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">[]   [:]</td>
+<td align="center">下标，切片</td>
+</tr>
+<tr>
+<td align="center">**</td>
+<td align="center">指数</td>
+</tr>
+<tr>
+<td align="center">~ + -</td>
+<td align="center">按位取反，正负号</td>
+</tr>
+<tr>
+<td align="center">* / % //</td>
+<td align="center">乘，除，模，整除</td>
+</tr>
+<tr>
+<td align="center">+ -</td>
+<td align="center">加，减</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt; &lt;&lt;</td>
+<td align="center">右移，左移</td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center">按位与</td>
+</tr>
+<tr>
+<td align="center">^ &#124;</td>
+<td align="center">按位异或，按位或</td>
+</tr>
+<tr>
+<td align="center">&lt;= &lt; &gt; &gt;=</td>
+<td align="center">小于等于，小于，大于，大于等于</td>
+</tr>
+<tr>
+<td align="center">== !==</td>
+<td align="center">等于，不等于</td>
+</tr>
+<tr>
+<td align="center">is  is not</td>
+<td align="center">身份运算符</td>
+</tr>
+<tr>
+<td align="center">in  not in</td>
+<td align="center">成员运算符</td>
+</tr>
+<tr>
+<td align="center">not or and</td>
+<td align="center">逻辑运算符</td>
+</tr>
+<tr>
+<td align="center">= += -= <em>= /= %= //= *</em>= &amp;=</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><!--最后这行好像有问题了--></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>%.2f : 这个占位符表示小数点后保留2位数的浮点数</p>
+<!--学会Python，我可以做什么呢？-->
 
+<h3 id="一个小练习"><a href="#一个小练习" class="headerlink" title="一个小练习"></a><strong>一个小练习</strong></h3><pre><code>value = float(input(&quot;please in put a value: &quot;)) 
+#为什么这里需要一个强制float转换呢？
+unit = input(&quot;then, input the unit: &quot;)
+
+if unit == &apos;in&apos; or unit == &apos;英寸&apos;:
+    print(&apos;%.2f英寸 = %.2f厘米&apos; % (value, value * 2.54))
+elif unit == &apos;cm&apos; or unit == &apos;厘米&apos;:
+    print(&apos;%.2f厘米 = %.2f英寸&apos; % (value, value/2.54))
+else:
+    print(&quot;Please input the com value.&quot;)
+
+#从这个程序可以知道，我对数据类型和变量名称还不是非常敏感</code></pre><h3 id="又一个小练习"><a href="#又一个小练习" class="headerlink" title="又一个小练习"></a><strong>又一个小练习</strong></h3><pre><code>#我的代码：
+
+score = int(input(&apos;Please input your score: &apos;))
+
+if score&lt;100 and score&gt;=90:
+    print(&apos;A&apos;)
+elif score&lt;90 and score&gt;=80:
+    print(&apos;B&apos;)
+elif score&lt;80 and score&gt;=70:
+    print(&apos;C&apos;)
+elif score&lt;70 and score&gt;=60:
+    print(&apos;D&apos;)
+else:
+    print(&quot;F&quot;)</code></pre><hr>
+<pre><code>    &quot;&quot;&quot;
+    百分制成绩转换为等级制成绩
+
+    Version: 0.1
+    Author: 骆昊
+    &quot;&quot;&quot;
+    score = float(input(&apos;请输入成绩: &apos;))
+    if score &gt;= 90:
+        grade = &apos;A&apos;
+    elif score &gt;= 80:
+        grade = &apos;B&apos;
+    elif score &gt;= 70:
+        grade = &apos;C&apos;
+    elif score &gt;= 60:
+        grade = &apos;D&apos;
+    else:
+        grade = &apos;E&apos;
+    print(&apos;对应的等级是:&apos;, grade)
+
+#首先第一眼看上去人家的代码比我的简洁
+#我对变量的应用还不是很熟悉，他多设置了一个 grade 变量
+#让程序更加简化，最后只写了一个 print() 函数
+#并且我对分支程序执行的顺序也没有他老道，他的判断条件更加简单</code></pre>
       
     </div>
     <footer class="article-footer">
